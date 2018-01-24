@@ -79,6 +79,6 @@ int main(){
 	    	cout << bst[i] << " \n"[i == n - 1]; 
 	    }
 	}
-
+	
  	return 0;
 }
