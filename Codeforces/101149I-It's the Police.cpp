@@ -57,6 +57,6 @@ int main(){
 
     for(auto x : res)
     	cout << x << " ";
-
+	
  	return 0;
 }
