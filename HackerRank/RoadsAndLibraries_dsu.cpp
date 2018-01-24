@@ -25,7 +25,7 @@ void unite(int x, int y, std::vector<int>& ds){
 		ds[xx] += ds[yy];
 		ds[yy] = xx;
 	}
-};
+}
 
 int main(){
 /*
@@ -51,7 +51,6 @@ int main(){
     	int n, m, clib, croad;
     	cin >> n >> m >> clib >> croad;
 
-
 	    std::vector<int> ds(n, -1);
 
     	while(m--){
@@ -65,7 +64,8 @@ int main(){
     	for(int i = 0; i < n; ++i){
     		if(ds[i] < 0){
     			int component_sz = abs(ds[i]);
-    			res += clib + (component_sz - 1) * 1ll * min(clib, croad); // at least one library must be built, the rest of this component can have libraries, or edges from that first library
+    			res += clib + (component_sz - 1) * 1ll * min(clib, croad); 
+				// at least one library must be built, the rest of this component can have libraries, or edges from that first library
     		}
     	}
 
