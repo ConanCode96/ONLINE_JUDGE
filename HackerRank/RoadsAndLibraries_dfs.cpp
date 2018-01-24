@@ -62,7 +62,8 @@ int main(){
     	for(int i = 0; i < n; ++i){
     		if(!vis[i]){
     			int component_sz = dfs(i, g, vis);
-    			res += clib + (component_sz - 1) * 1ll * min(clib, croad); // at least one library must be built, the rest of this component can have libraries, or edges from that first library
+    			res += clib + (component_sz - 1) * 1ll * min(clib, croad); 
+				// at least one library must be built, the rest of this component can have libraries, or edges from that first library
     		}
     	}
 
