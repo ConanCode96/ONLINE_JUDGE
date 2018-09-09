@@ -46,6 +46,13 @@ int main()
 
     ll each = sum / 3;
     if(sum % 3) return puts("0"), 0;
+    
+     /*
+        counts all possible triplets of subsets of indices [1, 2, ..., n] (p, q, r) that are:
+        1)non-intersecting
+        2)has the same sum
+        3)their union is [1, 2, ..., n] (i.e. all array indices should be included)
+    */
 
     int U = (1 << n) - 1;
     vector<int> masks;
