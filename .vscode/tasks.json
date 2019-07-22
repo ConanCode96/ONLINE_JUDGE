@@ -5,51 +5,29 @@
     "tasks": [
         {
             "type": "shell",
-            "label": "g++-8 build active file",
-            "command": "/usr/bin/g++-8",
+            "label": "main build active file",
+            "windows": {
+                "command": "g++",
+                "options": {
+                    "cwd": "C:\\MinGW\\bin"
+                }
+            },
+            "linux": {
+                "command": "/usr/bin/g++",
+                "options": {
+                    "cwd": "/usr/bin"
+                }
+            },
             "args": [
+                "-std=c++17",
                 "-g",
+                "-O2",
+                "-Wall",
+                "-fno-sanitize-recover",
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"
             ],
-            "options": {
-                "cwd": "/usr/bin"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ]
-        },
-        {
-            "type": "shell",
-            "label": "cpp build active file",
-            "command": "/usr/bin/cpp",
-            "args": [
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
-            ],
-            "options": {
-                "cwd": "/usr/bin"
-            },
-            "problemMatcher": [
-                "$gcc"
-            ]
-        },
-        {
-            "type": "shell",
-            "label": "g++ build active file",
-            "command": "/usr/bin/g++",
-            "args": [
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
-            ],
-            "options": {
-                "cwd": "/usr/bin"
-            },
             "problemMatcher": [
                 "$gcc"
             ],
