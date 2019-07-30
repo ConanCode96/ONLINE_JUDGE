@@ -44,7 +44,7 @@ int main(int argc, char* argv[]){
 
     int msb = 31 - __builtin_clz(sz);
 
-    int k = I / n;
+    int k = min(19, I / n);
 
     int K = 1 << k;
 
@@ -55,7 +55,7 @@ int main(int argc, char* argv[]){
         res = min(res, del);
     }
 
-    cout << res << endl;
+    cout << (res != n? res: 0) << endl;
 
     return 0;
 }
