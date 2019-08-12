@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+
+using namespace std;
+
+#define ll long long
+#define X first
+#define Y second
+#define all(x) x.begin(), x.end()
+
+const int MX = (int)1e5 + 10;
+// const int mod = (int)1e9 + 7;
+
+
+// template<typename ForwardIxterator, typename T>
+// ForwardIxterator first_less_than(ForwardIxterator fs, ForwardIxterator ls, T value){
+//     auto it = lower_bound(fs, ls, value);
+//     return it == fs ? ls : --it;
+// }
+
+int main(int argc, char* argv[]){
+
+    cin.tie(0); cout.tie(0);
+    ios_base::sync_with_stdio(0);
+
+    // vector<int> a({1, 2, 3});
+    // int x[3];
+
+    // auto it = first_less_than(x, x + 3, 1);
+
+    // cout << *it << endl;
+
+    return 0;
+}
