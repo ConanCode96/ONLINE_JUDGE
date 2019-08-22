@@ -23,10 +23,14 @@
                 "-g",
                 "-O2",
                 "-Wall",
+                "-Wextra",
+                "-Wshadow",
+                "-Wformat=2",
+                "-Wfloat-equal",
                 "-fno-sanitize-recover",
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "${fileDirname}/${fileBasenameNoExtension}.exe"
             ],
             "problemMatcher": [
                 "$gcc"
