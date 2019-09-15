@@ -57,8 +57,8 @@ int main(){
             int rx = sY + b * 9;
             int ry = rx + (rgX - b) * 9;
 
-            if(max(lx, rx) > min(ly, ry))
-                here |= true;
+            if(max(lx, rx) > min(ly, ry)) // CHECKING FOR MISS-intersecting (lx, ly) with (rx, ry)
+                here |= true; // Mono can win
         }
 
         //doing the reverse
@@ -69,8 +69,8 @@ int main(){
             int rx = sY + b * 0;
             int ry = rx + (rgX - b) * 9;
 
-            if (max(lx, rx) > min(ly, ry))
-                here |= true;
+            if (max(lx, rx) > min(ly, ry)) // CHECKING FOR MISS-intersecting (lx, ly) with (rx, ry)
+                here |= true; // Mono can win
         }
 
         // cout << a << " " << b << " " << here << endl;
