@@ -37,6 +37,7 @@ int main(){
 
         if(i == R){
             res += R - L + 1 - mx;
+            mx = 0;
             L = R = i + 1;
         }
     }
