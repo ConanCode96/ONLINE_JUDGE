@@ -1,3 +1,6 @@
 {
-    "python.pythonPath": "C:\\Users\\Conan\\Miniconda3\\python.exe"
+    "python.pythonPath": "C:\\Users\\Conan\\Miniconda3\\python.exe",
+    "files.associations": {
+        "iostream": "cpp"
+    }
 }
