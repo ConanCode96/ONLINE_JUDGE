@@ -7,7 +7,7 @@ Codeforces: http://codeforces.com/submissions/Hossam
 
 CodeChef: https://www.codechef.com/users/icyfire
 
-CsAcademy: https://csacademy.com/user/HossamDoma
+CsAcademy: https://csacademy.com/user/IcyFire101
 
 HackerRank: https://www.hackerrank.com/Razorbolt
 
