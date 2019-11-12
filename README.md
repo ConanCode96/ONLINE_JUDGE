@@ -7,7 +7,7 @@ HackerRank: https://www.hackerrank.com/Razorbolt
 
 CodeChef: https://www.codechef.com/users/icyfire
 
-CodeSignal: https://www.codesignal.com/profile/hossamdoma
+CodeSignal: https://app.codesignal.com/profile/hossamdoma
 
 Codeforces: http://codeforces.com/submissions/Hossam
 
