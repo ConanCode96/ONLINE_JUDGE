@@ -78,3 +78,11 @@ int main(){
 
     return 0;
 }
+
+/* Case that fails my first attempt!
+1 3 3
+1 3
+1 3 10
+1 2 1
+3 3 1
+*/
