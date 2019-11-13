@@ -45,7 +45,7 @@ int main(){
         nd[y[i]].push_back(i);
     }
 
-    ll best[s];
+    ll best[s]; // best cost up to index i, covering all broken cells, using some fixing segments
     memset(best, 0x7f, sizeof best);
 
     multiset<ll> ms;
