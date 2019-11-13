@@ -52,16 +52,16 @@ int main(){
 
     for(int i = 0; i < s; ++i){
 
+        for(auto &idx : st[i]){
+            ll pv = i ? best[i - 1] : 0;
+            ms.insert(pv + c[idx]); // add cost, to be deleted later at the end of the segment
+        }
+
         if (shouldBeFixed[i] && not ms.empty())
             best[i] = *ms.begin();
         
         if(shouldBeFixed[i] == 0) // no need to pay anymore for it
             best[i] = i ? best[i - 1] : 0;
-
-        for(auto &idx : st[i]){
-            ll pv = i ? best[i - 1] : 0;
-            ms.insert(pv + c[idx]); // add cost, to be deleted later at the end of the segment
-        }
         
         for(auto &idx : nd[i]){
             ll pv = x[idx] ? best[x[idx] - 1] : 0;
