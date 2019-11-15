@@ -31,6 +31,7 @@
                 "-fsanitize=address",
                 "-fsanitize=undefined",
                 "-fno-sanitize-recover",
+                "-DLOCAL",
                 "${file}",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}.exe"
