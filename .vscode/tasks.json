@@ -34,7 +34,7 @@
                 "-DLOCAL",
                 "${file}",
                 "-o",
-                "${fileDirname}/${fileBasenameNoExtension}.exe"
+                "${fileDirname}/${fileBasenameNoExtension}"
             ],
             "problemMatcher": [
                 "$gcc"
