@@ -8,8 +8,8 @@ cp ../../tmp.cpp C.cpp
 cp ../../tmp.cpp D.cpp
 cp ../../tmp.cpp E.cpp
 
-cp ../../stress.sh
-cp ../../testlib.h
-cp ../../gen.cpp
+cp ../../stress.sh .
+cp ../../testlib.h .
+cp ../../gen.cpp .
 
-echo "Done! GoodLuck Sir \")))" 
+echo "Done! GoodLuck Sir \")))"
