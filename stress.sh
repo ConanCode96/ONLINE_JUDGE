@@ -6,11 +6,17 @@ gen=$3
 # Second param is {Correct Answer} executable
 # Third param is the {Generator}
 
-for((i = 1; ; ++i)); do
+i=1
+
+# for((i = 1; ; ++i)); do
+
+while true
+do
     echo $i
     ./$gen $i > test
-    # ./$WA < test > out1
-    # ./$AC < test > out2
-    # diff -w out1 out2 || break
-    diff -w <(./$WA < test) <(./$AC < test) || break
+    ./$WA < test > out1
+    ./$AC < test > out2
+    diff -w out1 out2 || break
+    # diff -w < ( ./$WA < test) < ( ./$AC < test) || break
+    i=$(( $i + 1 ))
 done
