@@ -1,11 +1,15 @@
 #include<bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp> 
+#include <ext/pb_ds/tree_policy.hpp> 
 
 using namespace std;
-
+using namespace __gnu_pbds; 
+  
 #define ll long long
 #define X first
 #define Y second
 #define all(x) x.begin(), x.end()
+#define ordered_set tree<int, null_type,less<int>, rb_tree_tag,tree_order_statistics_node_update> 
 
 #define sim template < class c
 #define ris return * this
@@ -75,14 +79,11 @@ int main(){
 		sz[k].push_back({i, pos});
 	}
 
-	// set<int> st;
-	vector<int> v;
+	ordered_set st;
 	for(int i = n - 1; i >= 0; --i){
-		// st.insert(io[i]);
-		v.push_back(io[i]);
-		sort(all(v));
+		st.insert(io[i]);
 		for(auto &[id, pos] : sz[n - i]){
-			q[id] = a[v[pos - 1]];
+			q[id] = a[*st.find_by_order(pos - 1)];
 		}
 	}
 
