@@ -68,12 +68,12 @@ int main(){
 	}
 
 	string lf;
-	while(a) lf += "01", a--, b--;
-	if(b == -1) lf += "0", b++;
+	while(min(a, b)) lf += "01", a--, b--;
+	if(a) lf += "0", a--;
 
 	string rg;
-	while(d) rg = "23" + rg, c--, d--;
-	if(c == -1) rg = "3" + rg, c++;
+	while(min(c, d)) rg = "23" + rg, c--, d--;
+	if(d) rg = "3" + rg, d--;
 
 	string md;
 	int sz = min(b, c);
