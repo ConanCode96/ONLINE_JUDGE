@@ -67,18 +67,9 @@ int main(){
 		}
 	}
 
-	/*
-		1
-		2
-	*/
-
 	for(int idx = 2; idx <= m; ++idx){
 		for(int i = 1; i <= n; ++i){
 			for(int j = n; j >= i; --j){
-				// dp[idx][i][j] += dp[idx - 1][i][j];
-				// for(int ii = i; ii >= 1; --ii)
-				// 	for(int jj = j; jj <= n; ++jj)
-				// dp[idx][i][j] += dp[idx - 1][i][j];
 				dp[idx][i][j] = pref[idx - 1][i][j];
 				add_self(suff[idx][i][j], dp[idx][i][j] + 0LL + suff[idx][i][j + 1]);
 				add_self(pref[idx][i][j], suff[idx][i][j] + 0LL + pref[idx][i - 1][j]);
