@@ -28,9 +28,9 @@
                 "-Wformat=2",
                 "-Wfloat-equal",
                 "-Wno-unused-result",
-                // "-fsanitize=address",
-                // "-fsanitize=undefined",
+                "-fstack-protector-all",
                 "-fno-sanitize-recover",
+                "-Wl,--stack,536870912",
                 "-DLOCAL",
                 "${file}",
                 "-o",
@@ -43,6 +43,24 @@
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "type": "shell",
+            "label": "cpp.exe build active file",
+            "command": "C:\\MinGW\\bin\\cpp.exe",
+            "args": [
+                "-g",
+                "${file}",
+                "-o",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "C:\\MinGW\\bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
         }
     ]
 }
